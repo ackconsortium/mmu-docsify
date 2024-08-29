@@ -1,0 +1,11 @@
+{
+    "name" : "mmu-docsify",
+    "version": "0.1.0",
+    "scripts": {
+        "docsify": "docsify",
+        "docsify:dev": "docsify serve docs"
+    },
+  "devDependencies": {
+    "docsify-cli": "^4.4.4"
+  }
+}

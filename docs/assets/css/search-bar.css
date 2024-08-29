@@ -1,0 +1,168 @@
+nav .search {
+    padding: 0;
+    border: 0;
+    margin: 0 2em 0 2em;
+}
+
+nav .search input {
+    padding: 0;
+    line-height: 1;
+    font-size: inherit
+}
+
+nav .search .clear-button {
+    width: auto
+}
+
+nav .search .clear-button svg {
+    transform: scale(1)
+}
+
+nav .search .matching-post {
+    border: none
+}
+
+nav .search p {
+    font-size: inherit
+}
+
+nav .search {
+    order: var(--search-flex-order);
+    margin: var(--search-margin);
+    padding: var(--search-padding);
+    background: var(--search-background)
+}
+
+nav .search a {
+    color: inherit
+}
+
+nav .search h2 {
+    margin: var(--search-result-heading-margin);
+    font-size: var(--search-result-heading-font-size);
+    font-weight: var(--search-result-heading-font-weight);
+    color: var(--search-result-heading-color)
+}
+
+nav .search .input-wrap {
+    align-items: stretch;
+    margin: var(--search-input-margin);
+    background-color: var(--search-input-background-color);
+    border-width: var(--search-input-border-width, 0);
+    border-style: solid;
+    border-color: var(--search-input-border-color);
+    border-radius: var(--search-input-border-radius)
+}
+
+nav .search input[type=search] {
+    min-width: 0;
+    padding: var(--search-input-padding);
+    border: none;
+    background-color: rgba(0,0,0,0);
+    background-image: var(--search-input-background-image);
+    background-position: var(--search-input-background-position);
+    background-repeat: var(--search-input-background-repeat);
+    background-size: var(--search-input-background-size);
+    font-size: var(--search-input-font-size);
+    color: var(--search-input-color);
+    transition: var(--search-input-transition)
+}
+
+nav .search input[type=search]::-ms-clear {
+    display: none
+}
+
+nav .search input[type=search]::-moz-placeholder {
+    color: var(--search-input-placeholder-color, #808080)
+}
+
+nav .search input[type=search]::placeholder {
+    color: var(--search-input-placeholder-color, #808080)
+}
+
+nav .search input[type=search]::-webkit-input-placeholder {
+    line-height: normal
+}
+
+nav .search input[type=search]:focus {
+    background-color: var(--search-input-background-color--focus, var(--search-input-background-color));
+    background-image: var(--search-input-background-image--focus, var(--search-input-background-image));
+    background-position: var(--search-input-background-position--focus, var(--search-input-background-position));
+    background-size: var(--search-input-background-size--focus, var(--search-input-background-size))
+}
+
+@supports(width: env(safe-area-inset)) {
+    @media only screen and (orientation: landscape) {
+        nav .search input[type=search] {
+            margin-left:calc(env(safe-area-inset-left)/2)
+        }
+    }
+}
+
+nav .search p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+nav .search p:empty {
+    text-align: center
+}
+
+nav .search .clear-button {
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+    line-height: 1;
+    background: rgba(0,0,0,0);
+    cursor: pointer
+}
+
+nav .search .clear-button svg circle {
+    fill: var(--search-clear-icon-color1, #808080)
+}
+
+nav .search .clear-button svg path {
+    stroke: var(--search-clear-icon-color2, #fff)
+}
+
+nav .search.show~*:not(h1) {
+    display: none
+}
+
+nav .search .results-panel {
+    display: none;
+    color: var(--search-result-item-color);
+    font-size: var(--search-result-item-font-size);
+    font-weight: var(--search-result-item-font-weight)
+}
+
+nav .search .results-panel.show {
+    display: block
+}
+
+nav .search .matching-post {
+    margin: var(--search-result-item-margin);
+    padding: var(--search-result-item-padding)
+}
+
+nav .search .matching-post,nav .search .matching-post:last-child {
+    border-width: var(--search-result-item-border-width, 0) !important;
+    border-style: var(--search-result-item-border-style);
+    border-color: var(--search-result-item-border-color)
+}
+
+nav .search .matching-post p {
+    margin: 0
+}
+
+nav .search .search-keyword {
+    margin: var(--search-result-keyword-margin);
+    padding: var(--search-result-keyword-padding);
+    border-radius: var(--search-result-keyword-border-radius);
+    background-color: var(--search-result-keyword-background);
+    color: var(--search-result-keyword-color, currentColor);
+    font-style: normal;
+    font-weight: var(--search-result-keyword-font-weight)
+}
